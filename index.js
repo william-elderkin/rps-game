@@ -8,25 +8,33 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     
-  
+    let playerPoints = 0;
+    let computerPoints = 0;
+     
 
     if (playerSelection == "rock" && computerSelection == "paper") {
-        return(alert("You Lose! Paper covers Rock."));
+        computerPoints += 1;
+        return(alert(`You Lose! Paper covers Rock. Player Points = ${playerPoints} Computer Points = ${computerPoints}`))
     }
     if (playerSelection == "rock" && computerSelection == "scissors") {
-        return(alert("You Win! Rock smashes Scissors."));
+        playerPoints += 1;
+        return(alert(`You Win! Rock smashes Scissors. Player Points = ${playerPoints} Computer Points = ${computerPoints}`))
     }
     if (playerSelection == "paper" && computerSelection == "rock") {
-        return(alert("You Win! Paper covers Rock."));
+        playerPoints += 1;
+        return(alert(`You Win! Paper covers Rock. Player Points = ${playerPoints} Computer Points = ${computerPoints}`))
     }
     if (playerSelection == "paper" && computerSelection == "scissors") {
-        return(alert("You Lose! Scissors cut Paper."));
+        computerPoints += 1;
+        return(alert(`You Lose! Scissors cut Paper.Player Points = ${playerPoints} Computer Points = ${computerPoints}`))
     }
     if (playerSelection == "scissors" && computerSelection == "paper") {
-        return(alert("You Win! Scissors cut Paper."));
+        playerPoints += 1;
+        return(alert(`You Win! Scissors cut Paper.Player Points = ${playerPoints} Computer Points = ${computerPoints}`))
     }
     if (playerSelection == "scissors" && computerSelection == "rock") {
-        return(alert("You Lose! Rock smashes Scissors."));
+        computerPoints += 1;
+        return(alert(`You Lose! Rock smashes Scissors.Player Points = ${playerPoints} Computer Points = ${computerPoints}`))
     }
     else return(alert("It's a Tie!"))
 
