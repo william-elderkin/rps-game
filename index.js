@@ -14,36 +14,39 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerSelection == "rock" && computerSelection == "paper") {
         computerPoints += 1;
-        return(confirm(`You Lose! Paper covers Rock. Player Points = ${playerPoints} Computer Points = ${computerPoints}`))
+        return(`You Lose! Paper covers Rock. Player Points = ${playerPoints} Computer Points = ${computerPoints}`)
     }
     if (playerSelection == "rock" && computerSelection == "scissors") {
         playerPoints += 1;
-        return(confirm(`You Win! Rock smashes Scissors. Player Points = ${playerPoints} Computer Points = ${computerPoints}`))
+        return(`You Win! Rock smashes Scissors. Player Points = ${playerPoints} Computer Points = ${computerPoints}`)
     }
     if (playerSelection == "paper" && computerSelection == "rock") {
         playerPoints += 1;
-        return(confirm(`You Win! Paper covers Rock. Player Points = ${playerPoints} Computer Points = ${computerPoints}`))
+        return(`You Win! Paper covers Rock. Player Points = ${playerPoints} Computer Points = ${computerPoints}`)
     }
     if (playerSelection == "paper" && computerSelection == "scissors") {
         computerPoints += 1;
-        return(confirm(`You Lose! Scissors cut Paper.Player Points = ${playerPoints} Computer Points = ${computerPoints}`))
+        return(`You Lose! Scissors cut Paper.Player Points = ${playerPoints} Computer Points = ${computerPoints}`)
     }
     if (playerSelection == "scissors" && computerSelection == "paper") {
         playerPoints += 1;
-        return(confirm(`You Win! Scissors cut Paper.Player Points = ${playerPoints} Computer Points = ${computerPoints}`))
+        return(`You Win! Scissors cut Paper.Player Points = ${playerPoints} Computer Points = ${computerPoints}`)
     }
     if (playerSelection == "scissors" && computerSelection == "rock") {
         computerPoints += 1;
-        return(confirm(`You Lose! Rock smashes Scissors.Player Points = ${playerPoints} Computer Points = ${computerPoints}`))
+        return(`You Lose! Rock smashes Scissors.Player Points = ${playerPoints} Computer Points = ${computerPoints}`)
     }
-    else return(alert("It's a Tie!"))
+    else return("It's a Tie!")
 
 }
 function game() {
-    for (let i = 0; i < 5; i++) {
+    const playRound = playRound(playerSelection, computerSelection)
+    while (playerPoints || computerPoints > 5) {
     playRound(playerSelection, computerSelection);}
 }
 
 const playerSelection = prompt("Rock, Paper, or Scissors?");
 const computerSelection = computerPlay();
-console.log(game());
+console.log(playerSelection);
+console.log(computerSelection);
+console.log(playRound(playerSelection, computerSelection));
