@@ -2,3 +2,53 @@ body {
     background-color: lightYellow;
     color: lightBlue;
 }
+
+.rps-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: space-around;
+  background-color: thistle;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  flex: 1;
+  font-size: 16px;
+}
+
+
+.buttons {
+  display: flex;
+  width: 85%;
+  height: 15%;
+  border-radius: 20px;
+  background-color: #0033ff;
+  background-image: linear-gradient(#181818, #cc00ff);
+  margin: 1px;
+  justify-content: center;
+}
+
+.menu-projects {
+  display: flex;
+  width: 85%;
+  height: 15%;
+  border-radius: 20px;
+  background-color: #ffff00;
+  background-image: linear-gradient(#cc00ff, #33ff00);
+  margin: 1px;
+  justify-content: center;
+}
+
+.menu-dashboard {
+  display: flex;
+  width: 85%;
+  height: 15%;
+  border-radius: 20px;
+  background-color: #ff0000;
+  background-image: linear-gradient(#33ff00, #181818);
+  margin: 1px;
+  justify-content: center;
+}
+

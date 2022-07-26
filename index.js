@@ -37,12 +37,10 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase();
         let computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection));
     }
-}
 
 function finalScore(playerPoints, computerPoints) {
    
@@ -60,3 +58,11 @@ function finalScore(playerPoints, computerPoints) {
 game();
 finalScore(playerPoints, computerPoints);
 
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const id = button.querySelector("");
+    playerSelection = id.toLowerCase();
+
+    playRound(playerSelection, computerSelection);
+}
